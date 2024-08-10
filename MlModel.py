@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 data= pandas.read_csv("Datasets/housing2_cleaned.csv")
 data.fillna(data.mean(),inplace=True)
 
-x = data[['total_rooms', 'total_bedrooms', 'population', 'households', 'median_income']]
+x = data[['area','bedrooms','bathrooms','stories','parking']]
 y = data['median_house_value']
 
 xTrain,xTest,yTrain,yTest=train_test_split(x,y,test_size=0.2,random_state=42)
