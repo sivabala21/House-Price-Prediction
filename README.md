@@ -1,7 +1,5 @@
 # House Price Prediction
 
-==========================
-
 A web application that predicts the price of a house in India using machine learning.
 
 ## Overview
