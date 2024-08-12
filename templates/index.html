@@ -5,31 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Price Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>House Price Prediction</h1>
-    <form action="/predict" method="post">
-        <label for="area">Area:</label>
-        <input type="number" name="area" step="0.01" required><br>
+    <div class="container mt-5">
+        <h1 class="text-center">House Price Prediction</h1>
+        <form action="/predict" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="Bedrooms">Bedrooms:</label>
+                <input type="number" name="Bedrooms" class="form-control" required>
+            </div>
 
-        <label for="bedrooms">Bedrooms:</label>
-        <input type="number" name="bedrooms" required><br>
+            <div class="form-group">
+                <label for="Bathrooms">Bathrooms:</label>
+                <input type="number" name="Bathrooms" step="0.01" class="form-control" required>
+            </div>
 
-        <label for="bathrooms">Bathrooms:</label>
-        <input type="number" name="bathrooms" step="0.01" required><br>
+            <div class="form-group">
+                <label for="LivingArea">Living Area[in sqft]:</label>
+                <input type="number" name="LivingArea" step="0.01" class="form-control" required>
+            </div>
 
-        <label for="stories">Stories:</label>
-        <input type="number" name="stories" required><br>
+            <div class="form-group">
+                <label for="Floors">Number of Floors:</label>
+                <input type="number" name="Floors" class="form-control" required>
+            </div>
 
-        <label for="parking">Parking:</label>
-        <input type="number" name="parking" required><br>
+            <div class="form-group">
+                <label for="Views">Number of Views:</label>
+                <input type="number" name="Views" class="form-control" required>
+            </div>
 
-        <button type="submit">Predict</button>
-    </form>
-    {% if prediction_text %}
-    <h2>{{ prediction_text }}</h2>
-    {% endif %}
+            <div class="form-group">
+                <label for="Condition">Condition of the House[0-5]:</label>
+                <input type="text" name="Condition" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="HouseArea">Area of the House [excluding basement]:</label>
+                <input type="number" name="HouseArea" step="0.01" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="BasementArea">Area of the Basement[in sqft]:</label>
+                <input type="number" name="BasementArea" step="0.01" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="BuiltYear">Built Year:</label>
+                <input type="number" name="BuiltYear" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="PostalCode">Postal Code[Harayana]:</label>
+                <input type="text" name="PostalCode" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="SchoolsNearby">Number of Schools Nearby:</label>
+                <input type="number" name="SchoolsNearby" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+        <h2 class="text-center mt-4">{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS and dependencies --> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

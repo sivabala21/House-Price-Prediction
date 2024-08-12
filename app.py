@@ -1,3 +1,4 @@
+#Dependencies Imports
 from flask import Flask, request, render_template
 import pickle
 import numpy as np
@@ -5,11 +6,11 @@ import numpy as np
 app = Flask(__name__)
 
 model = pickle.load(open('model.pkl', 'rb'))
-
+#root route
 @app.route('/')
 def home():
     return render_template('index.html')
-
+#route for POST submission
 @app.route('/predict', methods=['POST'])
 def predict():
     features = [float(x) for x in request.form.values()]
