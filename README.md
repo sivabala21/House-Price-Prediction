@@ -6,7 +6,7 @@ A web application that predicts the price of a house in India using machine lear
 
 ---
 
-This web application is an extension of a previous project that used a linear regression model to predict the price of a house in India based on various features. The application is built using Flask, pandas, scikit-learn, and numpy. It provides a user interface for entering the required features and displaying the predicted price.
+This web application is an  project that used a linear regression model to predict the price of a house in India based on various features. The application is built using Flask, pandas, scikit-learn, and numpy. It provides a user interface for entering the required features and displaying the predicted price.
 
 ## Table of Contents
 
